@@ -6,6 +6,7 @@ Dir["./config/*.rb"].each {|file| require file}
 
 puts 'clear'
 
+begin
 while true 
 	command = menu(
 		"What you want to do?",
@@ -25,17 +26,19 @@ while true
 
 	case command
 	when :other_profile
-		puts "\n\n see someones profilen\n\n"	
+		TweetConsole::other_profile()	
 	when :profile
-		puts "\n\n see my own profile\n\n"
+		TweetConsole::profile()
 	when :search
-		puts "\n\n search \n\n"
+		TweetConsole::search()
 	when :help
-		puts "\n\n commands list \n\n"	
-	when :new_tweet
-		puts "\n\n creates a new tweet"
+		TweetConsole::help()	
+#	when :new_tweet
+#		TweetConsole::new_tweet()
 	when :exit 
+		Printc.title("Thank you for beeing here", :yellow, 2, true)
 		break
 	end
 end
-
+rescue Interrupt => e
+	Printc("Thank you for beeing here", :yellow, 2, true)
