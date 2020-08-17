@@ -1,18 +1,18 @@
 require 'readline'
 
+def menu(title, options, sleep_time=1, clear=false)
+	option = nil 
 
-def menu(titlem options, sleep_time=1, clear=false)
 	while true
-		Printc.title("#{title} Gabriel Leal", :green, sleep_time, clear)
-		options.each_with_index do |(key, value), i|
-			puts "#{i} #{key}"
-		end
+		Printc.title("#{title} ◼◼◼ Twitter Console ◼◼◼ ", :green, sleep_time, clear)
+		
+		options.each_with_index { |(key, value), i| puts "#{i} #{key}" }
 
 		option = Readline.readline(">> ")
-		if option !~ /\D/ and option.to_id.between?(0, options.count - 1)
+		
+		if option !~ /\D/ and option.to_i.between?(0, options.count - 1)
 			break
 		else
-
 			Print.pair('Warning:', 'Invalid option', :yellow, sleep_time)
 		end
 	end

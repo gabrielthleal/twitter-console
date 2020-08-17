@@ -1,4 +1,4 @@
-require 'radline'
+require 'readline'
 
 module TweetConsole
   def self.search
@@ -12,11 +12,11 @@ module TweetConsole
         puts ''
         Printc.pair('Text', t.attrs[:full_text], :yellow, :white, 0.1)
         Printc.pair('User', t.user.name, :yellow, :white, 0.1)
-        Printc.pair('Number of retweets', t.retwee_count, :yellow, :white, 0.1)
+        Printc.pair('Number of retweets', t.retweet_count, :yellow, :white, 0.1)
       end
 
       option = menu(
-        'What do you prefer?'
+        'What do you prefer?',
         {
           'Do another search': :search,
           'Back to menu': :exit
