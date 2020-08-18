@@ -11,7 +11,7 @@ begin
 		command = menu(
 			'What do you wanna do?',
 			{
-				# "Make a tweet": :new_tweet,
+				"Make a tweet": :new_tweet,
 				"My profile": :profile,
 				"Someones profile": :other_profile,
 				"Search": :search,
@@ -29,8 +29,8 @@ begin
 			TweetConsole::search()
 		when :help
 			TweetConsole::help()	
-	#	when :new_tweet
-	#		TweetConsole::new_tweet()
+		when :new_tweet
+			TweetConsole::new_tweet()
 		when :exit 
 			Printc.title("Thank you for beeing here", :yellow, 2, true)
 			break
