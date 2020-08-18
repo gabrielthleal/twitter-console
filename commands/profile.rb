@@ -9,7 +9,7 @@ module TweetConsole
       TweetConsole::user_info(user)
 
       option = menu(
-        'What do you prefer?',
+        'What do you wanna do?',
         {
           'Back to menu': :exit,
           'See your tweets': :tweets

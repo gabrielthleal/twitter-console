@@ -9,9 +9,9 @@ puts 'clear'
 begin
 	while true 
 		command = menu(
-			'What do you want to do?',
+			'What do you wanna do?',
 			{
-				"Make a tweet": :new_tweet,
+				# "Make a tweet": :new_tweet,
 				"My profile": :profile,
 				"Someones profile": :other_profile,
 				"Search": :search,

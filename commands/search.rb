@@ -16,7 +16,7 @@ module TweetConsole
       end
 
       option = menu(
-        'What do you prefer?',
+        'What do you wanna do?',
         {
           'Do another search': :search,
           'Back to menu': :exit

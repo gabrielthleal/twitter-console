@@ -4,7 +4,7 @@ def menu(title, options, sleep_time=1, clear=false)
 	option = nil 
 
 	while true
-		Printc.title("#{title} ◼◼◼ Twitter Console ◼◼◼ ", :green, sleep_time, clear)
+		Printc.title("Welcome to Twitter Console - #{title}", :green, sleep_time, clear)
 		
 		options.each_with_index { |(key, value), i| puts "#{i} #{key}" }
 
@@ -13,7 +13,7 @@ def menu(title, options, sleep_time=1, clear=false)
 		if option !~ /\D/ and option.to_i.between?(0, options.count - 1)
 			break
 		else
-			Print.pair('Warning:', 'Invalid option', :yellow, sleep_time)
+			Printc.pair('Warning:', 'Invalid option', :yellow, sleep_time)
 		end
 	end
 
